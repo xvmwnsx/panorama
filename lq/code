@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  
+  <style>
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      margin: 0;
+    }
+
+    #container {
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+<body>
+  <script src="js/three.min.js"></script>
+<script src="js/panolens.min.js"></script>
+  <meta charset="utf-8">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/three.js/105/three.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/panolens@0.11.0/build/panolens.min.js"></script>
+  <div id="container"></div>
+  <div id="container"></div>
+<button id="change-image-button">Update Image</button>
+  <script>
+    var panorama, viewer, container; 
+
+    container = document.querySelector('#container');
+
+    panorama = new PANOLENS.ImagePanorama('https://raw.githubusercontent.com/kksgh/panorama/main/lq/panorama-1(1).jpg');
+
+
+
+    viewer = new PANOLENS.Viewer({
+      container: container
+    });
+    viewer.add(panorama);
+  </script>
+</body>
+</html>
